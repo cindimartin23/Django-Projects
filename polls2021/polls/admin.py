@@ -2,6 +2,10 @@ from django.contrib import admin
 from django.db import models
 from .models import Question, Choice
 
+admin.site.site_header = "Administrador de Encuestas"
+admin.site.site_title = "Area de Administración de Encuestas"
+admin.site.index_title = "Bienvenido al Area de Administración de Encuestas"
+
 # Personalizando el Admin Form
 class ChoiceInLine(admin.TabularInline):
     model = Choice
@@ -19,4 +23,4 @@ class QuestionAdmin(admin.ModelAdmin):
     
 # Register your models here.
 admin.site.register(Question, QuestionAdmin)
-admin.site.register(Choice)
+#admin.site.register(Choice)
